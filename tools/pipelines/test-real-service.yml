@@ -46,7 +46,8 @@ stages:
         artifactBuildId: $(resources.pipeline.client.runID)
         testCommand: test:realsvc:local:report:full
         env:
-        #   FLUID_TEST_LOGGER_PKG_PATH: ${{ variables.testWorkspace }}/node_modules/@ff-internal/aria-logger # Contains getTestLogger impl to inject
+          # FLUID_TEST_LOGGER_PKG_PATH: ${{ variables.testWorkspace }}/node_modules/@ff-internal/aria-logger # Contains getTestLogger impl to inject
+          FLUID_TEST_LOGGER_PKG_PATH:
 
   # end-to-end tests local server
   - stage: e2e_local_server_1espool
@@ -61,4 +62,5 @@ stages:
         artifactBuildId: $(resources.pipeline.client.runID)
         testCommand: test:realsvc:local:report:full
         env:
-        #   FLUID_TEST_LOGGER_PKG_PATH: ${{ variables.testWorkspace }}/node_modules/@ff-internal/aria-logger # Contains getTestLogger impl to inject
+          # FLUID_TEST_LOGGER_PKG_PATH: ${{ variables.testWorkspace }}/node_modules/@ff-internal/aria-logger # Contains getTestLogger impl to inject
+          FLUID_TEST_LOGGER_PKG_PATH:
